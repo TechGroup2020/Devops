@@ -86,7 +86,7 @@ pipeline {
          }
       }
       
-
+	}
      
       // Stages Sections is done
    } 
