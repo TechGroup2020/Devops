@@ -1,0 +1,53 @@
+#DB Config & Mail config
+
+client:
+     url: http://localhost:4200
+
+spring:
+  data:
+    mongodb:
+        host: mongoserver
+        port: 27017
+        authentication-database: admin
+        username: pradeep
+        password: P@ssw0rd1
+        database: rest_tutorial
+        uri: mongodb://localhost/rest_tutorial
+    repositories:
+        type: AUTO
+    datasource:
+        driverClassName: com.mongodb.Mongo
+    session:
+        store-type: mongodb
+  mail:
+        default-encoding: UTF-8
+        host: smtp.gmail.com
+        username: komathaperfumery@gmail.com
+        password: mlshjbfrzdltudak
+        port: 587
+        tls: true
+        protocol: smtp
+        test-connection: false
+        properties:
+            mail.smtp:
+                    auth: true
+                    starttls.enable: true
+                    ssl.trust: smtp.gmail.com
+        
+
+
+mongo:
+    ssl:
+        enabled:false
+    db:
+        key-store: /mongoClient.jks
+        key-store-password: mongodbct
+        key-store-type: jks
+        ssl-version: TLS
+        key-algorithm: SunX509
+
+security:ignored: /**
+
+
+top-selling-count: 2  
+    
