@@ -32,7 +32,7 @@ pipeline {
 				  checkout([$class: 'GitSCM', branches: [[name: "*/master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'build-depends-code']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e5297a36-afd0-4715-9874-689876141e47', url: build_depends_repo]]])
          }
       }
-
+	}
 
       stage('compile-code') {
 
@@ -86,7 +86,7 @@ pipeline {
          }
       }
       
-	}
+	
      
       // Stages Sections is done
    } 
